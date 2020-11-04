@@ -1,7 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c9a26a6-06c6-49eb-9156-446a7960ddb7" name="Default Changelist" comment="" />
+    <list default="true" id="3c9a26a6-06c6-49eb-9156-446a7960ddb7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/client/src/components/utils/ImageSlider.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/views/LandingPage/Sections/CheckBox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/views/LandingPage/Sections/Datas.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/views/LandingPage/Sections/RadioBox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/views/LandingPage/Sections/SearchFeature.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/models/sample.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/routes/sample.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/1604451993067_435b2e574d39ccb5a4eae704558a9a3f.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/1604452000183_00a1df3facc257f85eafc05b8ca5752c.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/1604453651843_1b52bd2d27c457d567baddfab3867ae3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/1604462198260_435b2e574d39ccb5a4eae704558a9a3f.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/1604464128776_abe4bc7db0e77a5430fe1f4614503b6b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/1604464133419_7a22247d8c09de80e821cd1a1e69ece3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/1604464139264_7a5ef96d9276d97350d0a61d79426747.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/1604466041182_d92c5f52035fafa8f885598301738d7d.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/1604466056817_d81f2a99cafb5991db0ff5cf068ae2b7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/1604466070998_7a5ef96d9276d97350d0a61d79426747.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/1604466094853_4e1453e7e92a9267ff496097fd88370e.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/1604466109370_41b7f0a4fb5af6246b0bfc6e662498d9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/1604466235069_41b7f0a4fb5af6246b0bfc6e662498d9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/1604466239187_cf9afdd897cad31b26ba316b6299a2de.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/1604466244090_dab422309768d3dfa0ab8b1f5d309006.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/1604473821304_00a1df3facc257f85eafc05b8ca5752c.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/1604473833570_7a5ef96d9276d97350d0a61d79426747.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/1604473872793_89ea472f374c95b727932479270325c1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/1604473876459_d81f2a99cafb5991db0ff5cf068ae2b7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/1604473893811_83ccf8c91b9bce608863399110452b13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/1604473900016_4e1453e7e92a9267ff496097fd88370e.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/1604473919114_190a2e0b71616ede92bc8409b29a4b6a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/1604473923270_74fbff58327c0bf87d7a84df037a3482.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/1604473928327_c3c4d89ed63faacdff65bf7e2859101a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/1604473944773_ab9d5ff88c176ac931e79aacbbb03a6b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/1604473959384_abe4bc7db0e77a5430fe1f4614503b6b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/1604474009529_b64d1de66fc3cb72696e203115efcf3a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/1604476825664_d81f2a99cafb5991db0ff5cf068ae2b7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/1604481272318_7a22247d8c09de80e821cd1a1e69ece3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/1604481287680_00a1df3facc257f85eafc05b8ca5752c.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/1604481307072_41b7f0a4fb5af6246b0bfc6e662498d9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/1604481326075_8a3d4c12cccac020fa24f37249a70777.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/views/LandingPage/LandingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/views/LandingPage/LandingPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/views/UploadProductPage/UploadProductPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/views/UploadProductPage/UploadProductPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/hoc/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/hoc/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/Product.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/Product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/product.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +81,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="2" />
   </component>
@@ -24,18 +94,29 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectId" id="1jmJVZBrH4Zx19WfJlAy63CBnjz" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../react-shop-ko-master" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.prettier.on.save" value="true" />
-    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\DEVELOPMENT\REACT\shpping-mall\server\config" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -47,36 +128,72 @@
       <updated>1604403358032</updated>
       <workItem from="1604403359220" duration="688000" />
       <workItem from="1604405662535" duration="10245000" />
+      <workItem from="1604451400074" duration="126000" />
+      <workItem from="1604451555869" duration="22089000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state width="2539" height="395" key="GridCell.Tab.0.bottom" timestamp="1604404049222">
-      <screen x="-2560" y="-678" width="2560" height="1417" />
+    <state x="1007" y="396" key="FileChooserDialogImpl" timestamp="1604461762611">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="-1553" y="396" key="FileChooserDialogImpl/0.0.2560.1400/-2560.0.2560.1400/-958.1440.1920.1040@-2560.0.2560.1400" timestamp="1604453590656" />
+    <state x="1007" y="396" key="FileChooserDialogImpl/0.0.2560.1400/-2560.0.2560.1400/-958.1440.1920.1040@0.0.2560.1400" timestamp="1604461762611" />
+    <state width="2505" height="367" key="GridCell.Tab.0.bottom" timestamp="1604451538813">
+      <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
     <state width="2539" height="395" key="GridCell.Tab.0.bottom/-2560.-678.2560.1417/-5120.-678.2560.1417/0.23.1680.1027@-2560.-678.2560.1417" timestamp="1604404049222" />
-    <state width="2539" height="395" key="GridCell.Tab.0.center" timestamp="1604404049221">
-      <screen x="-2560" y="-678" width="2560" height="1417" />
+    <state width="2505" height="367" key="GridCell.Tab.0.bottom/0.0.2560.1400/-2560.0.2560.1400/-958.1440.1920.1040@-2560.0.2560.1400" timestamp="1604451538813" />
+    <state width="2505" height="367" key="GridCell.Tab.0.center" timestamp="1604451538813">
+      <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
     <state width="2539" height="395" key="GridCell.Tab.0.center/-2560.-678.2560.1417/-5120.-678.2560.1417/0.23.1680.1027@-2560.-678.2560.1417" timestamp="1604404049221" />
-    <state width="2539" height="395" key="GridCell.Tab.0.left" timestamp="1604404049220">
-      <screen x="-2560" y="-678" width="2560" height="1417" />
+    <state width="2505" height="367" key="GridCell.Tab.0.center/0.0.2560.1400/-2560.0.2560.1400/-958.1440.1920.1040@-2560.0.2560.1400" timestamp="1604451538813" />
+    <state width="2505" height="367" key="GridCell.Tab.0.left" timestamp="1604451538813">
+      <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
     <state width="2539" height="395" key="GridCell.Tab.0.left/-2560.-678.2560.1417/-5120.-678.2560.1417/0.23.1680.1027@-2560.-678.2560.1417" timestamp="1604404049220" />
-    <state width="2539" height="395" key="GridCell.Tab.0.right" timestamp="1604404049221">
-      <screen x="-2560" y="-678" width="2560" height="1417" />
+    <state width="2505" height="367" key="GridCell.Tab.0.left/0.0.2560.1400/-2560.0.2560.1400/-958.1440.1920.1040@-2560.0.2560.1400" timestamp="1604451538813" />
+    <state width="2505" height="367" key="GridCell.Tab.0.right" timestamp="1604451538813">
+      <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
     <state width="2539" height="395" key="GridCell.Tab.0.right/-2560.-678.2560.1417/-5120.-678.2560.1417/0.23.1680.1027@-2560.-678.2560.1417" timestamp="1604404049221" />
-    <state x="-1779" y="-331" key="SettingsEditor" timestamp="1604408557794">
-      <screen x="-2560" y="-678" width="2560" height="1417" />
+    <state width="2505" height="367" key="GridCell.Tab.0.right/0.0.2560.1400/-2560.0.2560.1400/-958.1440.1920.1040@-2560.0.2560.1400" timestamp="1604451538813" />
+    <state x="781" y="343" key="SettingsEditor" timestamp="1604472139835">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="-1779" y="-331" key="SettingsEditor/-2560.-678.2560.1417/-5120.-678.2560.1417/0.23.1680.1027@-2560.-678.2560.1417" timestamp="1604408557794" />
-    <state x="-1615" y="-353" width="670" height="676" key="search.everywhere.popup" timestamp="1604412288882">
-      <screen x="-2560" y="-678" width="2560" height="1417" />
+    <state x="-1779" y="343" key="SettingsEditor/0.0.2560.1400/-2560.0.2560.1400/-958.1440.1920.1040@-2560.0.2560.1400" timestamp="1604452068714" />
+    <state x="781" y="343" key="SettingsEditor/0.0.2560.1400/-2560.0.2560.1400/-958.1440.1920.1040@0.0.2560.1400" timestamp="1604472139835" />
+    <state x="920" y="348" width="719" height="704" key="find.popup" timestamp="1604470120706">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="920" y="348" width="719" height="704" key="find.popup/0.0.2560.1400/-2560.0.2560.1400/-958.1440.1920.1040@0.0.2560.1400" timestamp="1604470120705" />
+    <state x="852" y="327" key="run.anything.popup" timestamp="1604466675254">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="852" y="327" key="run.anything.popup/0.0.2560.1400/-2560.0.2560.1400/-958.1440.1920.1040@0.0.2560.1400" timestamp="1604466675254" />
+    <state x="945" y="321" width="840" height="668" key="search.everywhere.popup" timestamp="1604483089302">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="-1615" y="-353" width="670" height="676" key="search.everywhere.popup/-2560.-678.2560.1417/-5120.-678.2560.1417/0.23.1680.1027@-2560.-678.2560.1417" timestamp="1604412288882" />
+    <state x="945" y="321" width="840" height="668" key="search.everywhere.popup/0.0.2560.1400/-2560.0.2560.1400/-958.1440.1920.1040@0.0.2560.1400" timestamp="1604483089302" />
   </component>
 </project>

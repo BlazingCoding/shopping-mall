@@ -17,7 +17,7 @@ const Continents = [
 ]
 
 function UploadProductPage(props) {
-
+    console.log('UploadProductPage');
     const [Title, setTitle] = useState("")
     const [Description, setDescription] = useState("")
     const [Price, setPrice] = useState(0)
@@ -102,13 +102,13 @@ function UploadProductPage(props) {
                     {Continents.map(item => (
                         <option key={item.key} value={Continent}>{item.value}</option>
                     ))}
-
                 </select>
                 <br/>
                 <br/>
-                <Button type="submit">
+                {/* Button인지 button인지 구분을 잘하자. 1시간 날림. */}
+                <button type="submit">
                     확인
-                </Button>
+                </button>
             </Form>
         </div>
     );
