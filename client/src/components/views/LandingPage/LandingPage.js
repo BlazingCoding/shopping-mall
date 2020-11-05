@@ -10,6 +10,7 @@ import { continents, price } from "./Sections/Datas";
 import SearchFeature from "./Sections/SearchFeature";
 
 function LandingPage() {
+    console.log('LandingPage');
     const [Products, setProducts] = useState([]);
     const [Skip, setSkip] = useState(0);
     const [Limit, setLimit] = useState(8);
@@ -65,7 +66,7 @@ function LandingPage() {
         console.log('product', product);
         return <Col lg={6} md={8} xs={24} key={index}>
             <Card
-                cover={<ImageSlider images={product.images}/>}
+                cover={<a href={`/product/${product._id}`}><ImageSlider images={product.images} /></a>}
             >
                 <Meta
                     title={product.title}

@@ -33,7 +33,6 @@ const tailFormItemLayout = {
     },
   },
 };
-
 function RegisterPage(props) {
   const dispatch = useDispatch();
   return (
