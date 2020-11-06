@@ -84,10 +84,12 @@ userSchema.methods.generateToken = function(cb) {
     })
 }
 
+// cb = callback
 userSchema.statics.findByToken = function (token, cb) {
     var user = this;
 
     jwt.verify(token,'secret',function(err, decode){
+        // findOne은 Mongodb 함수
         user.findOne({"_id":decode, "token":token}, function(err, user){
             if(err) return cb(err);
             cb(null, user);

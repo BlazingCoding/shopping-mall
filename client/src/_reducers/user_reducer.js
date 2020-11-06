@@ -9,7 +9,6 @@ import {
     ON_SUCCESS_BUY
 } from '../_actions/types';
  
-
 export default function(state={},action){
     switch(action.type){
         case REGISTER_USER:

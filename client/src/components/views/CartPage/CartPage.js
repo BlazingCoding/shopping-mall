@@ -5,7 +5,6 @@ import UserCardBlock from "./Sections/UserCardBlock";
 import {Empty, Result} from "antd";
 import Paypal from "../../utils/Paypal";
 
-
 function CartPage(props) {
     const dispatch = useDispatch()
 

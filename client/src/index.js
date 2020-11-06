@@ -10,13 +10,16 @@ import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from "react-router-dom";
 
 import Reducer from './_reducers';
-import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
 import promiseMiddleware from 'redux-promise';
 import ReduxThunk from 'redux-thunk';
 
 const createStoreWithMiddleware = applyMiddleware(promiseMiddleware, ReduxThunk)(createStore);
-
+// 아래의 코드는 Redux Dev Tool을 사용하기 위한 코드
+// Reducer,
+// window.__REDUX_DEVTOOLS_EXTENSION__ &&
+// window.__REDUX_DEVTOOLS_EXTENSION__()
 ReactDOM.render(
     <Provider
         store={ createStoreWithMiddleware(

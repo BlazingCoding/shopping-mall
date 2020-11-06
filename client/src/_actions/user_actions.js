@@ -88,7 +88,6 @@ export function getCartItems(cartItems, userCart){
     }
 }
 
-
 export function removeCartItem(productId){
     const request = axios.get(`/api/users/removeFromCart?id=${productId}`)
         .then(response => {
