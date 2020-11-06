@@ -23,28 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3c9a26a6-06c6-49eb-9156-446a7960ddb7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/components/views/CartPage/CartPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/views/CartPage/Sections/UserCardBlock.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/views/CartPage/Sections/UserCardBlock.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/views/DetailProductPage/DetailProductPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/views/DetailProductPage/Sections/ProductImage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/views/DetailProductPage/Sections/ProductInfo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/views/HistoryPage/HistoryPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/_actions/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/_actions/types.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/_actions/user_actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/_actions/user_actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/_reducers/user_reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/_reducers/user_reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/views/LandingPage/LandingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/views/LandingPage/LandingPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/views/LandingPage/Sections/CheckBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/views/LandingPage/Sections/CheckBox.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/views/LandingPage/Sections/RadioBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/views/LandingPage/Sections/RadioBox.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/views/NavBar/Sections/RightMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/views/NavBar/Sections/RightMenu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/views/RegisterPage/RegisterPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/views/RegisterPage/RegisterPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/User.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/product.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/users.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,8 +36,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -109,7 +91,8 @@
       <workItem from="1604405662535" duration="10245000" />
       <workItem from="1604451400074" duration="126000" />
       <workItem from="1604451555869" duration="22720000" />
-      <workItem from="1604538392658" duration="21112000" />
+      <workItem from="1604538392658" duration="21193000" />
+      <workItem from="1604623710700" duration="715000" />
     </task>
     <servers />
   </component>
