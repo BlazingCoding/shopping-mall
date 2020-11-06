@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import { useDispatch } from "react-redux";
-import { getCartItems, removeCartItem } from "../../../_actions/user_actions"
+import { getCartItems, removeCartItem, onSuccessBuy } from "../../../_actions/user_actions"
 import UserCardBlock from "./Sections/UserCardBlock";
-import {Empty} from "antd";
+import {Empty, Result} from "antd";
 import Paypal from "../../utils/Paypal";
 
 
@@ -11,6 +11,7 @@ function CartPage(props) {
 
     const [Total, setTotal] = useState(0);
     const [ShowTotal, setShowTotal] = useState(false);
+    const [ShowSuccess, setShowSuccess] = useState(false);
 
     useEffect(() => {
         let cartItems=[]
@@ -47,6 +48,19 @@ function CartPage(props) {
             })
     }
 
+    const transactionSuccess = (data) => {
+        dispatch(onSuccessBuy({
+            paymentData: data,
+            cartDetail: props.user.cartDetail
+        }))
+            .then(response => {
+                if(response.payload.success) {
+                    setShowTotal(false)
+                    setShowSuccess(true)
+                }
+            })
+    }
+
     return (
         <div style={{ width: '85%', margin: '3rem auto' }}>
             <h1>My Cart</h1>
@@ -54,18 +68,28 @@ function CartPage(props) {
                 <UserCardBlock products={props.user.cartDetail} removeItem={removeFromCart}/>
             </div>
 
+
+
             {ShowTotal ?
                 <div style={{ marginTop: '3rem'}}>
                     <h2>Total Amount: ${Total}</h2>
                 </div>
-                :
-                <div>
-                    <br/>
-                    <Empty description={false}/>
-                </div>
+                : ShowSuccess ?
+                    <Result
+                        status="success"
+                        title="Successfully Purchased Items"
+                    />
+                    :
+                    <div>
+                        <br/>
+                        <Empty description={false}/>
+                    </div>
             }
-
-            <Paypal/>
+            {ShowTotal &&
+            <Paypal
+                total={Total}
+                onSuccess={transactionSuccess}
+            />}
 
         </div>
     );
