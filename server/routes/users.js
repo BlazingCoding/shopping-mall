@@ -142,11 +142,10 @@ router.get('/removeFromCart', auth, (req, res) => {
                         cart
                     })
                 })
-
         }
     )
-
 })
+
 router.post('/successBuy', auth, (req, res) => {
 
     //1. User Collection 안에 History 필드 안에 간단한 결제 정보 넣어주기
@@ -217,8 +216,6 @@ router.post('/successBuy', auth, (req, res) => {
             })
         }
     )
-
-
 })
 
 module.exports = router;

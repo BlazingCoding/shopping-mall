@@ -68,8 +68,6 @@ function CartPage(props) {
                 <UserCardBlock products={props.user.cartDetail} removeItem={removeFromCart}/>
             </div>
 
-
-
             {ShowTotal ?
                 <div style={{ marginTop: '3rem'}}>
                     <h2>Total Amount: ${Total}</h2>
@@ -85,11 +83,13 @@ function CartPage(props) {
                         <Empty description={false}/>
                     </div>
             }
+
             {ShowTotal &&
-            <Paypal
-                total={Total}
-                onSuccess={transactionSuccess}
-            />}
+                <Paypal
+                    total={Total}
+                    onSuccess={transactionSuccess}
+                />
+            }
 
         </div>
     );

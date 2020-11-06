@@ -65,7 +65,6 @@ export function addToCart(id){
 }
 
 export function getCartItems(cartItems, userCart){
-
     const request = axios.get(`/api/product/products_by_id?id=${cartItems}&type=array`)
         .then(response => {
             // CartItem들에 해당하는 정보들을
@@ -91,7 +90,6 @@ export function getCartItems(cartItems, userCart){
 
 
 export function removeCartItem(productId){
-
     const request = axios.get(`/api/users/removeFromCart?id=${productId}`)
         .then(response => {
 
@@ -114,7 +112,6 @@ export function removeCartItem(productId){
 }
 
 export function onSuccessBuy(data){
-
     const request = axios.post(`/api/users/successBuy`, data)
         .then(response => {
             return response.data
@@ -125,7 +122,3 @@ export function onSuccessBuy(data){
         payload: request
     }
 }
-
-
-
-

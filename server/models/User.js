@@ -43,7 +43,6 @@ const userSchema = mongoose.Schema({
     }
 })
 
-
 userSchema.pre('save', function( next ) {
     var user = this;
     
@@ -97,6 +96,5 @@ userSchema.statics.findByToken = function (token, cb) {
 }
 
 const User = mongoose.model('User', userSchema);
-
 
 module.exports = { User }
