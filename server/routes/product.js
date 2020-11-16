@@ -1,7 +1,9 @@
 const express = require('express');
 const router = express.Router();
+const cors = require('cors')
 const multer = require('multer')
 const { Product } = require('../models/Product')
+
 //=================================
 //             Product
 //=================================
@@ -18,7 +20,7 @@ var storage = multer.diskStorage({
 
 var upload = multer({ storage: storage }).single("file")
 
-router.post('/image', (req, res) => {
+router.post('/image', cors(), (req, res) => {
     /* 가져온 이미지를 저장을 해주면 된다.*/
     upload(req, res, err => {
         if(err) {
@@ -32,7 +34,7 @@ router.post('/image', (req, res) => {
     })
 })
 
-router.post('/', (req, res) => {
+router.post('/', cors(), (req, res) => {
     /* 받아온 정보들을 DB에 넣어 준다. */
     const product = new Product(req.body)
 
@@ -42,7 +44,7 @@ router.post('/', (req, res) => {
     })
 })
 
-router.post('/products', (req, res) => {
+router.post('/products', cors(), (req, res) => {
     // product collection에 들어 있는 모든 상품 정보를 가져오기
     let limit = req.body.limit ? parseInt(req.body.limit) : 20;
     let skip = req.body.skip ? parseInt(req.body.skip) : 0;
@@ -98,7 +100,7 @@ router.post('/products', (req, res) => {
 
 // axios.get(`/api/product/products_by_id?id=${productId}&type=single`)
 
-router.get('/products_by_id', (req, res) => {
+router.get('/products_by_id', cors(), (req, res) => {
     let type = req.query.type
     let productIds = req.query.id
 

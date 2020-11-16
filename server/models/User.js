@@ -12,7 +12,7 @@ const userSchema = mongoose.Schema({
     email: {
         type:String,
         trim:true,
-        unique: 1 
+        unique: 1
     },
     password: {
         type: String,
@@ -24,7 +24,7 @@ const userSchema = mongoose.Schema({
     },
     role : {
         type:Number,
-        default: 0 
+        default: 0
     },
     cart: {
         type: Array,
@@ -45,15 +45,15 @@ const userSchema = mongoose.Schema({
 
 userSchema.pre('save', function( next ) {
     var user = this;
-    
-    if(user.isModified('password')){    
+
+    if(user.isModified('password')){
         // console.log('password changed')
         bcrypt.genSalt(saltRounds, function(err, salt){
             if(err) return next(err);
-    
+
             bcrypt.hash(user.password, salt, function(err, hash){
                 if(err) return next(err);
-                user.password = hash 
+                user.password = hash
                 next()
             })
         })
@@ -71,8 +71,6 @@ userSchema.methods.comparePassword = function(plainPassword,cb){
 
 userSchema.methods.generateToken = function(cb) {
     var user = this;
-    console.log('user',user)
-    console.log('userSchema', userSchema)
     var token =  jwt.sign(user._id.toHexString(),'secret')
     var oneHour = moment().add(1, 'hour').valueOf();
 

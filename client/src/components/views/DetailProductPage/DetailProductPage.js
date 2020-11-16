@@ -3,6 +3,7 @@ import axios from 'axios';
 import ProductImage from "./Sections/ProductImage";
 import ProductInfo from "./Sections/ProductInfo";
 import {Row, Col} from 'antd'
+import {USER_SERVER} from "../../Config";
 
 function DetailProductPage(props) {
 
@@ -12,7 +13,7 @@ function DetailProductPage(props) {
 
     useEffect(() => {
         // 컴포넌트가 화면에 나타남
-        axios.get(`/api/product/products_by_id?id=${productId}&type=single`)
+        axios.get(`${USER_SERVER}/product/products_by_id?id=${productId}&type=single`)
             .then(response => {
                 setProduct(response.data[0])
             })

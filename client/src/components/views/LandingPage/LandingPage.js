@@ -1,86 +1,89 @@
-import React, {useEffect, useState} from 'react'
-import { FaCode } from "react-icons/fa";
+import React, { useEffect, useState } from 'react'
+import { FaCode } from 'react-icons/fa'
 import axios from 'axios'
-import {Icon, Col, Card, Row, Carousel} from 'antd'
+import { Icon, Col, Card, Row, Carousel } from 'antd'
 import Meta from 'antd/lib/card/Meta'
-import ImageSlider from "../../utils/ImageSlider";
-import CheckBox from "./Sections/CheckBox";
-import RadioBox from "./Sections/RadioBox";
-import { continents, price } from "./Sections/Datas";
-import SearchFeature from "./Sections/SearchFeature";
+import ImageSlider from '../../utils/ImageSlider'
+import CheckBox from './Sections/CheckBox'
+import RadioBox from './Sections/RadioBox'
+import SearchFeature from './Sections/SearchFeature'
+import { continents, price } from './Sections/Datas'
+import { USER_SERVER } from '../../Config'
 
 function LandingPage() {
-    console.log('LandingPage');
-    const [Products, setProducts] = useState([]);
-    const [Skip, setSkip] = useState(0);
-    const [Limit, setLimit] = useState(8);
-    const [PostSize, setPostSize] = useState(0);
+    console.log('LandingPage')
+    const [Products, setProducts] = useState([])
+    const [Skip, setSkip] = useState(0)
+    const [Limit, setLimit] = useState(8)
+    const [PostSize, setPostSize] = useState(0)
     const [Filters, setFilters] = useState({
         continents: [],
-        price: []
-    });
-    const [SearchTerm, setSearchTerm] = useState("");
+        price: [],
+    })
+    const [SearchTerm, setSearchTerm] = useState('')
 
     // 처음 들어올때 한번 getProducts로 product 정보가져옴
     useEffect(() => {
-        let body = {
+        const body = {
             skip: Skip,
-            limit: Limit
+            limit: Limit,
         }
-       getProducts(body)
+        getProducts(body)
     }, [])
 
     const getProducts = (body) => {
-        axios.post('/api/product/products', body)
-            .then(response => {
-                if(response.data.success) {
-                    if(body.loadMore){
+        axios.post(`${USER_SERVER}/product/products`, body)
+            .then((response) => {
+                if (response.data.success) {
+                    if (body.loadMore) {
                         setProducts([...Products, ...response.data.productInfo])
                     } else {
                         setProducts(response.data.productInfo)
                     }
                     setPostSize(response.data.postSize)
                 } else {
-                    alert("상품들을 가져오는데 실패 했습니다.")
+                    alert('상품들을 가져오는데 실패 했습니다.')
                 }
             })
     }
 
     // 더보기 핸들러
     const loadMoreHandler = () => {
-        let skip = Skip + Limit
-        let body = {
+        const skip = Skip + Limit
+        const body = {
             // skip: Skip, 여기에 Skip을 넣어 줌으로써 데이터가 중복으로 계속 추가되었다...
-            skip: skip,
+            skip,
             limit: Limit,
             loadMore: true,
-            filters: Filters
+            filters: Filters,
         }
         getProducts(body)
         setSkip(skip)
-        console.log('Limit', Limit);
-        console.log('Skip', Skip);
+        console.log('Limit', Limit)
+        console.log('Skip', Skip)
     }
 
     const renderCards = Products.map((product, index) => {
-        console.log('product', product);
-        return <Col lg={6} md={8} xs={24} key={index}>
-            <Card
-                cover={<a href={`/product/${product._id}`}><ImageSlider images={product.images} /></a>}
-            >
-                <Meta
-                    title={product.title}
-                    description={`$${product.price}`}
-                />
-            </Card>
-        </Col>
+        console.log('product', product)
+        return (
+            <Col lg={6} md={8} xs={24} key={index}>
+                <Card
+                    cover={<a href={`/product/${product._id}`}><ImageSlider images={product.images} /></a>}
+                >
+                    <Meta
+                        title={product.title}
+                        description={`$${product.price}`}
+                    />
+                </Card>
+            </Col>
+        )
     })
 
     const showFilteredResults = (filters) => {
-        let body = {
+        const body = {
             skip: 0,
             limit: Limit,
-            filters: filters
+            filters,
         }
         getProducts(body)
         setSkip(0)
@@ -88,9 +91,9 @@ function LandingPage() {
 
     const handlePrice = (value) => {
         const data = price
-        let array = [];
-        for (let key in data){
-            if(data[key]._id === parseInt(value, 10)) {
+        let array = []
+        for (const key in data) {
+            if (data[key]._id === parseInt(value, 10)) {
                 array = data[key].array
             }
         }
@@ -99,12 +102,12 @@ function LandingPage() {
     }
     // 체크박스, 라디오버튼 클릭했을때 필터적용
     const handleFilters = (filters, category) => {
-        const newFilters = { ...Filters}
+        const newFilters = { ...Filters }
         newFilters[category] = filters
 
-        console.log('filters', filters);
-        if(category === "price") {
-            let priceValues = handlePrice(filters)
+        console.log('filters', filters)
+        if (category === 'price') {
+            const priceValues = handlePrice(filters)
             newFilters[category] = priceValues
         }
 
@@ -113,11 +116,11 @@ function LandingPage() {
     }
 
     const updateSearchTerm = (newSearchTerm) => {
-        let body = {
+        const body = {
             skip: 0,
             limit: Limit,
             filters: Filters,
-            searchTerm: newSearchTerm
+            searchTerm: newSearchTerm,
         }
         setSkip(0)
         setSearchTerm(newSearchTerm)
@@ -125,27 +128,26 @@ function LandingPage() {
     }
 
     return (
-        <div style={{width: '75%', margin: '3rem auto' }}>
+        <div style={{ width: '75%', margin: '3rem auto' }}>
             <div style={{ textAlign: 'center' }}>
-                <h2>Let's Travel Anywhere <Icon type="rocket"/> </h2>
+                <h2>Let's Travel Anywhere <Icon type="rocket" /> </h2>
             </div>
 
             {/* Filter */}
-            <Row gutter={[16,16]}>
+            <Row gutter={[16, 16]}>
                 <Col lg={12} xs={24}>
                     {/* CheckBox */}
                     {/* continents는 Datas.js의 나라 객체 배열이다. _id와 나라 name이 객체를 이룬다. */}
-                    <CheckBox list={continents} handleFilters={filters => handleFilters(filters, "continents")}/>
+                    <CheckBox list={continents} handleFilters={(filters) => handleFilters(filters, 'continents')} />
                 </Col>
                 <Col lg={12} xs={24}>
                     {/* RadioBox */}
-                    <RadioBox list={price} handleFilters={filters => handleFilters(filters, "price")}/>
+                    <RadioBox list={price} handleFilters={(filters) => handleFilters(filters, 'price')} />
                 </Col>
             </Row>
 
-
             {/* Search */}
-            <div style={{display:'flex', justifyContent:'flex-end', margin:'1rem auto'}}>
+            <div style={{ display: 'flex', justifyContent: 'flex-end', margin: '1rem auto' }}>
                 <SearchFeature
                     refreshFunction={updateSearchTerm}
                 />
@@ -156,15 +158,16 @@ function LandingPage() {
                 {renderCards}
             </Row>
 
-            <br/>
+            <br />
 
-            {PostSize >= Limit &&
-                <div style={{display: 'flex', justifyContent: 'center'}}>
-                    <button onClick={loadMoreHandler}>더보기</button>
-                </div>
-            }
+            {PostSize >= Limit
+                && (
+                    <div style={{ display: 'flex', justifyContent: 'center' }}>
+                        <button onClick={loadMoreHandler}>더보기</button>
+                    </div>
+                )}
 
-       </div>
+        </div>
     )
 }
 

@@ -4,12 +4,7 @@ import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { registerUser } from "../../../_actions/user_actions";
 import { useDispatch } from "react-redux";
-
-import {
-  Form,
-  Input,
-  Button,
-} from 'antd';
+import { Form, Input, Button, } from 'antd';
 
 const formItemLayout = {
   labelCol: {

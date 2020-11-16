@@ -1,5 +1,7 @@
 import React from 'react';
 import "./UserCardBlock.css"
+import {USER_SERVER} from "../../../Config";
+
 function UserCardBlock(props) {
 
     const renderCartImage = (images) => {

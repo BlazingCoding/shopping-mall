@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {Typography, Button, Form, Input} from "antd";
 import FileUpload from "../../utils/FileUpload";
 import Axios from "axios";
+import {USER_SERVER} from "../../Config";
 
 // const { Title } = Typography;
 const { TextArea } = Input
@@ -45,7 +46,6 @@ function UploadProductPage(props) {
 
     const submitHandler = (event) => {
         event.preventDefault()
-        console.log('hi');
         if(!Title || !Description || !Price || !Continent || !Images) {
             return alert("모든 값을 넣어주셔야 합니다.")
         }
@@ -60,7 +60,7 @@ function UploadProductPage(props) {
             images: Images,
             continents: Continent
         }
-        Axios.post("/api/product", body)
+        Axios.post(`${USER_SERVER}/product`, body)
             .then(response => {
                 if(response.data.success) {
                     alert('상품 업로드에 성공 했습니다.')
@@ -70,7 +70,6 @@ function UploadProductPage(props) {
                 }
             })
     }
-
 
     return (
         <div style={{ maxWidth: "700px", margin: "2rem auto"}}>

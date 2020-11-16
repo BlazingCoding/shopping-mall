@@ -1,5 +1,9 @@
 const express = require('express');
 const router = express.Router();
+const cors = require('cors')
+const bodyParser = require("body-parser");
+
+/* MODEL */
 const { User } = require("../models/User");
 const { Product } = require("../models/Product");
 const { Payment } = require("../models/Payment");
@@ -12,6 +16,7 @@ const async = require('async')
 //=================================
 
 router.get("/auth", auth, (req, res) => {
+    console.log('node res', res);
     res.status(200).json({
         _id: req.user._id,
         isAdmin: req.user.role === 0 ? false : true,
@@ -26,19 +31,9 @@ router.get("/auth", auth, (req, res) => {
     });
 });
 
-router.post("/register", (req, res) => {
-
-    const user = new User(req.body);
-
-    user.save((err, doc) => {
-        if (err) return res.json({ success: false, err });
-        return res.status(200).json({
-            success: true
-        });
-    });
-});
-
-router.post("/login", (req, res) => {
+router.post("/login",cors(), bodyParser.json(), (req, res) => {
+    console.log('node login req.body.email', req.body.email);
+    console.log('node login req.body', req.body);
     User.findOne({ email: req.body.email }, (err, user) => {
         if (!user)
             return res.json({
@@ -47,6 +42,7 @@ router.post("/login", (req, res) => {
             });
 
         user.comparePassword(req.body.password, (err, isMatch) => {
+            console.log('req.body.password', req.body.password);
             if (!isMatch)
                 return res.json({ loginSuccess: false, message: "Wrong password" });
 
@@ -68,6 +64,18 @@ router.get("/logout", auth, (req, res) => {
     User.findOneAndUpdate({ _id: req.user._id }, { token: "", tokenExp: "" }, (err, doc) => {
         if (err) return res.json({ success: false, err });
         return res.status(200).send({
+            success: true
+        });
+    });
+});
+
+router.post("/register", (req, res) => {
+
+    const user = new User(req.body);
+
+    user.save((err, doc) => {
+        if (err) return res.json({ success: false, err });
+        return res.status(200).json({
             success: true
         });
     });
