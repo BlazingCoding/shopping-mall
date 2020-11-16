@@ -1,11 +1,10 @@
-import React, {useState} from 'react';
-import { Input } from 'antd';
+import React, { useState } from 'react'
+import { Input } from 'antd'
 
-const { Search } = Input;
+const { Search } = Input
 
 function SearchFeature(props) {
-
-    const [SearchTerm, setSearchTerm] = useState("");
+    const [SearchTerm, setSearchTerm] = useState('')
 
     const searchHandler = (event) => {
         setSearchTerm(event.currentTarget.value)
@@ -21,7 +20,7 @@ function SearchFeature(props) {
                 value={SearchTerm}
             />
         </div>
-    );
+    )
 }
 
-export default SearchFeature;
+export default SearchFeature

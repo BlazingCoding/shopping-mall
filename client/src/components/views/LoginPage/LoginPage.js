@@ -2,8 +2,11 @@ import React, { useState } from 'react'
 import { withRouter } from 'react-router-dom'
 import { Formik } from 'formik'
 import * as Yup from 'yup'
-import { Form, Icon, Input, Button, Checkbox, Typography } from 'antd'
+import { Form, Input, Button, Checkbox, Typography } from 'antd'
 import { useDispatch } from 'react-redux'
+import Icon from '@ant-design/icons'
+// import Icon from 'antd/es/icon'
+// Icon
 import { loginUser } from '../../../_actions/user_actions'
 
 const { Title } = Typography

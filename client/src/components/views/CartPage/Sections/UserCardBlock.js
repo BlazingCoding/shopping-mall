@@ -1,13 +1,12 @@
-import React from 'react';
-import "./UserCardBlock.css"
-import {USER_SERVER} from "../../../Config";
+import React from 'react'
+import './UserCardBlock.css'
+import { SERVER_PATH } from '../../../Config'
 
 function UserCardBlock(props) {
-
     const renderCartImage = (images) => {
-        if(images.length > 0) {
-            let image = images[0]
-            return `http://localhost:5000/${image}`
+        if (images.length > 0) {
+            const image = images[0]
+            return `${SERVER_PATH}/${image}`
         }
     }
 
@@ -15,7 +14,7 @@ function UserCardBlock(props) {
         props.products && props.products.map((product, index) => (
             <tr key={index}>
                 <td>
-                    <img src={renderCartImage(product.images)} alt="product" style={{width: '70px'}}/>
+                    <img src={renderCartImage(product.images)} alt="product" style={{ width: '70px' }} />
                 </td>
                 <td>
                     {product.quantity} EA
@@ -24,7 +23,7 @@ function UserCardBlock(props) {
                     ${product.price}
                 </td>
                 <td>
-                    <button onClick={() => props.removeItem(product._id)}>
+                    <button type="button" onClick={() => props.removeItem(product._id)}>
                         Remove
                     </button>
                 </td>
@@ -48,7 +47,7 @@ function UserCardBlock(props) {
                 </tbody>
             </table>
         </div>
-    );
+    )
 }
 
-export default UserCardBlock;
+export default UserCardBlock

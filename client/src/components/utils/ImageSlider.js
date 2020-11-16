@@ -13,8 +13,11 @@ function ImageSlider(props) {
                             src={`${SERVER_PATH}/${image}`}
                             alt=""
                         />
-                        {/* <img style={{width:'100%', maxHeight:'150px'}} */}
-                        {/*     src={`http://localhost:5000/${image}`} alt=""/> */}
+                        {/* <img */}
+                        {/*    style={{ width: '100%', maxHeight: '150px' }} */}
+                        {/*    src={`http://localhost:5000/${image}`} */}
+                        {/*    alt="" */}
+                        {/* /> */}
                     </div>
                 ))}
             </Carousel>

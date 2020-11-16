@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
-import { Menu, Icon, Badge } from 'antd'
+import { Menu, Badge } from 'antd'
+import Icon from '@ant-design/icons'
 import axios from 'axios'
 import { withRouter } from 'react-router-dom'
 import { useSelector } from 'react-redux'
@@ -19,14 +20,13 @@ function RightMenu(props) {
         })
     }
 
-    // console.log(user.userData)
-    // console.log(user.userData.isAuth)
-
     if (user.userData && !user.userData.isAuth) {
+        console.log('user.userData', user.userData)
+        console.log('user.userData.isAuth', user.userData.isAuth)
         return (
             <Menu mode={props.mode}>
                 <Menu.Item key="mail">
-                    <a href="/login">Signin</a>
+                    <a href="/login">LogIn</a>
                 </Menu.Item>
                 <Menu.Item key="app">
                     <a href="/register">Signup</a>
@@ -34,6 +34,7 @@ function RightMenu(props) {
             </Menu>
         )
     }
+
     return (
         <Menu mode={props.mode}>
             <Menu.Item key="history">

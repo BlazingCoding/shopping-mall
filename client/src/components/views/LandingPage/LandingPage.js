@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react'
-import { FaCode } from 'react-icons/fa'
 import axios from 'axios'
-import { Icon, Col, Card, Row, Carousel } from 'antd'
+import { Col, Card, Row } from 'antd'
+import Icon from '@ant-design/icons'
 import Meta from 'antd/lib/card/Meta'
 import ImageSlider from '../../utils/ImageSlider'
 import CheckBox from './Sections/CheckBox'
 import RadioBox from './Sections/RadioBox'
 import SearchFeature from './Sections/SearchFeature'
 import { continents, price } from './Sections/Datas'
-import { USER_SERVER } from '../../Config'
+import { PRODUCT_SERVER, USER_SERVER } from '../../Config'
 
 function LandingPage() {
     console.log('LandingPage')
@@ -22,17 +22,8 @@ function LandingPage() {
     })
     const [SearchTerm, setSearchTerm] = useState('')
 
-    // 처음 들어올때 한번 getProducts로 product 정보가져옴
-    useEffect(() => {
-        const body = {
-            skip: Skip,
-            limit: Limit,
-        }
-        getProducts(body)
-    }, [])
-
     const getProducts = (body) => {
-        axios.post(`${USER_SERVER}/product/products`, body)
+        axios.post(`${PRODUCT_SERVER}/products`, body)
             .then((response) => {
                 if (response.data.success) {
                     if (body.loadMore) {
@@ -46,6 +37,15 @@ function LandingPage() {
                 }
             })
     }
+
+    // 처음 들어올때 한번 getProducts로 product 정보가져옴
+    useEffect(() => {
+        const body = {
+            skip: Skip,
+            limit: Limit,
+        }
+        getProducts(body)
+    }, [])
 
     // 더보기 핸들러
     const loadMoreHandler = () => {
@@ -63,21 +63,18 @@ function LandingPage() {
         console.log('Skip', Skip)
     }
 
-    const renderCards = Products.map((product, index) => {
-        console.log('product', product)
-        return (
-            <Col lg={6} md={8} xs={24} key={index}>
-                <Card
-                    cover={<a href={`/product/${product._id}`}><ImageSlider images={product.images} /></a>}
-                >
-                    <Meta
-                        title={product.title}
-                        description={`$${product.price}`}
-                    />
-                </Card>
-            </Col>
-        )
-    })
+    const renderCards = Products.map((product, index) => (
+        <Col lg={6} md={8} xs={24} key={index}>
+            <Card
+                cover={<a href={`/product/${product._id}`}><ImageSlider images={product.images} /></a>}
+            >
+                <Meta
+                    title={product.title}
+                    description={`$${product.price}`}
+                />
+            </Card>
+        </Col>
+    ))
 
     const showFilteredResults = (filters) => {
         const body = {
@@ -130,7 +127,7 @@ function LandingPage() {
     return (
         <div style={{ width: '75%', margin: '3rem auto' }}>
             <div style={{ textAlign: 'center' }}>
-                <h2>Let's Travel Anywhere <Icon type="rocket" /> </h2>
+                <h2> Let&#39;s Travel Anywhere <Icon type="rocket" /> </h2>
             </div>
 
             {/* Filter */}
@@ -163,7 +160,7 @@ function LandingPage() {
             {PostSize >= Limit
                 && (
                     <div style={{ display: 'flex', justifyContent: 'center' }}>
-                        <button onClick={loadMoreHandler}>더보기</button>
+                        <button type="button" onClick={loadMoreHandler}>더보기</button>
                     </div>
                 )}
 

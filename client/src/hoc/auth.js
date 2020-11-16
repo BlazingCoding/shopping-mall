@@ -10,12 +10,16 @@ export default function (SpecificComponent, option, adminRoute = null) {
 
         useEffect(() => {
             // To know my current status, send Auth request
+            console.log('user', user)
             dispatch(auth())
                 .then((response) => {
                     console.log('auth response', response)
+                    console.log('auth response isAuth', response.payload.isAuth)
                     // Not Loggined in Status
                     if (!response.payload.isAuth) {
+                        console.log('option', option)
                         if (option) {
+                            console.log('login')
                             props.history.push('/login')
                         }
                     // Loggined in Status
@@ -23,18 +27,17 @@ export default function (SpecificComponent, option, adminRoute = null) {
                     // supposed to be Admin page, but not admin person wants to go inside
                         if (adminRoute && !response.payload.isAdmin) {
                             props.history.push('/')
-                        }
-                        // Logged in Status, but Try to go into log in page
-                        else if (option === false) {
+                        } else if (option === false) { // Logged in Status, but Try to go into log in page
                             props.history.push('/')
                         }
                     }
                 })
         }, [])
-
+        console.log('user2', user)
         return (
             <SpecificComponent {...props} user={user} />
         )
     }
+
     return AuthenticationCheck
 }

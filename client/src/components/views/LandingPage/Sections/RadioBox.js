@@ -1,19 +1,18 @@
-import React, { useState } from 'react';
-import { Collapse, Radio } from "antd";
+import React, { useState } from 'react'
+import { Collapse, Radio } from 'antd'
 
-const { Panel } = Collapse;
+const { Panel } = Collapse
 function RadioBox(props) {
-
-    const [Value, setValue] = useState(0);
+    const [Value, setValue] = useState(0)
 
     const renderRadioBox = () => (
-        props.list && props.list.map(value => (
+        props.list && props.list.map((value) => (
             <Radio key={value._id} value={value._id}> {value.name} </Radio>
         ))
     )
 
     const handleChange = (event) => {
-        console.log('event.target.value',event.target.value);
+        console.log('event.target.value', event.target.value)
         setValue(event.target.value)
         props.handleFilters(event.target.value)
     }
@@ -28,7 +27,7 @@ function RadioBox(props) {
                 </Panel>
             </Collapse>
         </div>
-    );
+    )
 }
 
-export default RadioBox;
+export default RadioBox

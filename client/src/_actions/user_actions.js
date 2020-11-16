@@ -9,11 +9,11 @@ import {
     REMOVE_CART_ITEM,
     ON_SUCCESS_BUY,
 } from './types'
-import { USER_SERVER } from '../components/Config.js'
+import { PRODUCT_SERVER, USER_SERVER } from '../components/Config'
 
 // 액션 생성 함수 type과 payload를 반환한다.
 export function registerUser(dataToSubmit) {
-    const request = axios.post(`${USER_SERVER}/users/register`, dataToSubmit)
+    const request = axios.post(`${USER_SERVER}/register`, dataToSubmit)
         .then((response) => response.data)
 
     return {
@@ -24,8 +24,7 @@ export function registerUser(dataToSubmit) {
 
 export function loginUser(dataToSubmit) {
     // console.log('dataToSubmit', dataToSubmit);
-    // console.log('`${USER_SERVER}/login`',`${USER_SERVER}/users/login`);
-    const request = axios.post(`${USER_SERVER}/users/login`, dataToSubmit)
+    const request = axios.post(`${USER_SERVER}/login`, dataToSubmit)
         .then((response) => {
             console.log('user_action res', response)
             return response.data
@@ -40,7 +39,7 @@ export function loginUser(dataToSubmit) {
 }
 
 export function auth() {
-    const request = axios.get(`${USER_SERVER}/users/auth`)
+    const request = axios.get(`${USER_SERVER}/auth`)
         .then((response) => response.data)
     console.log('auth req', request)
     return {
@@ -50,7 +49,7 @@ export function auth() {
 }
 
 export function logoutUser() {
-    const request = axios.get(`${USER_SERVER}/users/logout`)
+    const request = axios.get(`${USER_SERVER}/logout`)
         .then((response) => response.data)
 
     return {
@@ -63,7 +62,7 @@ export function addToCart(id) {
     const body = {
         productId: id,
     }
-    const request = axios.post(`${USER_SERVER}/users/addToCart`, body)
+    const request = axios.post(`${USER_SERVER}/addToCart`, body)
         .then((response) => response.data)
 
     return {
@@ -73,7 +72,7 @@ export function addToCart(id) {
 }
 
 export function getCartItems(cartItems, userCart) {
-    const request = axios.get(`${USER_SERVER}/product/products_by_id?id=${cartItems}&type=array`)
+    const request = axios.get(`${PRODUCT_SERVER}/products_by_id?id=${cartItems}&type=array`)
         .then((response) => {
             // CartItem들에 해당하는 정보들을
             // Product Collection에서 가져온후에
@@ -97,7 +96,7 @@ export function getCartItems(cartItems, userCart) {
 }
 
 export function removeCartItem(productId) {
-    const request = axios.get(`${USER_SERVER}/users/removeFromCart?id=${productId}`)
+    const request = axios.get(`${USER_SERVER}/removeFromCart?id=${productId}`)
         .then((response) => {
             // productInfo, cart 정보를 조합해서 CartDetail을 만든다.
             response.data.cart.forEach((item) => {
@@ -118,7 +117,7 @@ export function removeCartItem(productId) {
 }
 
 export function onSuccessBuy(data) {
-    const request = axios.post(`${USER_SERVER}/users/successBuy`, data)
+    const request = axios.post(`${USER_SERVER}/successBuy`, data)
         .then((response) => response.data)
 
     return {

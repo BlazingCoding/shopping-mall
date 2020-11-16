@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { Drawer, Button, Icon } from 'antd'
+import { Drawer, Button } from 'antd'
+import Icon from '@ant-design/icons'
 import LeftMenu from './Sections/LeftMenu'
 import RightMenu from './Sections/RightMenu'
 import './Sections/Navbar.css'

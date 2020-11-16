@@ -38,6 +38,23 @@
     // Indent props with 4 spaces
     "react/jsx-indent-props": ["error", 4],
     "no-param-reassign": "off",
-    "react/prop-types": "off"
+    "react/prop-types": "off",
+    "no-restricted-syntax": "off",
+    "no-unused-vars": "off",
+    "react/no-array-index-key": "off",
+    "jsx-a11y/control-has-associated-label": "off",
+    "react/jsx-props-no-spreading": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "react/destructuring-assignment": "off",
+    "max-len": "off",
+    "react/prefer-stateless-function": "off",
+    "array-callback-return": "off",
+    "no-nested-ternary": "off",
+    "consistent-return": 0,
+    "react/jsx-props-no-multi-spaces": 0,
+    "no-shadow": 0,
+    "no-lonely-if": 0,
+    "import/no-extraneous-dependencies": 0
   }
 }
